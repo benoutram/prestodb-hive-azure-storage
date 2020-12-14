@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  presto:
+    container_name: prestodb-server
+    build:
+      context: ./presto
+      args:
+        PRESTO_VERSION: 0.244
+    networks:
+      - prestodb-network
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./presto/etc:/opt/presto/etc
+
+networks:
+  prestodb-network:

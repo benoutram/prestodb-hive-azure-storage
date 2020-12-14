@@ -1,0 +1,22 @@
+<configuration>
+  <property>
+    <name>fs.azure.account.keyprovider.account.blob.core.windows.net</name>
+    <value>org.apache.hadoop.fs.azure.SimpleKeyProvider</value>
+  </property>
+  <property>
+    <name>fs.azure.account.key.<storage-account-name>.blob.core.windows.net</name>
+    <value>your-access-key-here</value>
+  </property>
+  <property>
+    <name>fs.AbstractFileSystem.wasb.impl</name>
+    <value>org.apache.hadoop.fs.azure.Wasb</value>
+  </property>
+  <property>
+    <name>fs.AbstractFileSystem.wasbs.impl</name>
+    <value>org.apache.hadoop.fs.azure.Wasbs</value>
+  </property>
+  <property>
+    <name>fs.azure.enable.append.support</name>
+    <value>true</value>
+  </property>
+</configuration>
